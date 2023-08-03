@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Averigua El Numero</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+</head>
+<body>
+	<div class="header">
+		<h1>AVERIGUA EL NUMERO ENTRE</h1>
+		<h2>1 - 100</h2>
+	</div>
+	<div class="game">
+		<form method="POST">
+			{% csrf_token %}
+			{{Game}}
+			<button>ENVIAR</button>
+			{% if valor == 0 %}
+			{% elif valor == 1 %}
+			<h2>EL VALOR ES MAS ALTO</h2>
+			{% elif valor == 2 %}
+			<h2>EL NUMERO ES MAS BAJO</h2>
+			{% elif valor == 3 %}
+			<h2>DIGITE UN NUMERO ENTRE 1 Y 100</h2>
+			{% endif %}
+		</form>
+	</div>
+</body>
+</html>

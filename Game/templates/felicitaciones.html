@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>¡¡Ganaste!!</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+</head>
+<body>
+	<div class="header">
+		<h1>AVERIGUA EL NUMERO</h1>
+	</div>
+	<div id="felicitaciones">
+		<h1>Felicitaciones</h1>
+		<h2>El numero era:</h2>
+		<h2>{{valor}}</h2>
+		<a href="">INTENTA OTRA VEZ</a>
+	</div>
+</body>
+</html>
